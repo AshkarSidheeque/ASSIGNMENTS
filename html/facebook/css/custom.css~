@@ -60,7 +60,6 @@
 
 		.navbar-header{background-color: #3b5998;} 
 		.navbar-default{background-color:#fff !important;}
-		.form-inline label {color:#000;}
 	}
 
 	  .slogan{
