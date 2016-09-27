@@ -115,7 +115,7 @@
                      </label>
                      <br />
                      <span class="help-block">By clicking Create my account, you agree to our Terms and that you have read our Data Use Policy, including our Cookie Use.</span>
-                     <button class="btn btn-lg btn-primary btn-block signup-btn btn-success" type="submit">
+                     <button class="btn btn-lg  btn-block signup-btn btn-success" type="submit">
                      Create my account</button>
                   </form>
                </div>
@@ -139,7 +139,7 @@
             		 		//	url = "pages/profile.html?pro_pic=" + data[0].vchr_prof_pic
 // $(location).attr("href", url);
 
-                                 $( "body" ).load( "pages/profile.html", function() {
+                $( "body" ).load( "pages/profile.html", function() {
                 $(".profile_image").attr('src', data[0].vchr_prof_pic);
                 $('#fname').html(data[0].vchr_first_name);
                 $('#lname').html(data[0].vchr_last_name);
@@ -168,7 +168,7 @@
          		else if(data[0].ResponseCode == 404)
          		{
          			
-                                         $( "body" ).load( "pages/login2.html", function() {
+                $( "body" ).load( "pages/login2.html", function() {
               
 
                });
