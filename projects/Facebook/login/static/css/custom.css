@@ -1,0 +1,207 @@
+
+	      body{
+	  background-color:#edf0f5;
+	  }
+	  .aln-right { float: right; }
+	  
+	  .navbar-default{
+	    background-color:#3b5998;
+	    border-bottom:none;
+	  }
+	  .form-inline label{
+	    color:#fff;
+	    font-size:13px;
+	    font-weight:normal;
+	  }
+	  .form-inline .input-sm{
+	    border-radius:0;
+	  }
+	  h1{
+	    color:#141823;
+	    font-size:25px;
+	    font-weight:bold;
+	  }
+	  .login-btn {
+	    
+	    padding: 3px 6px 3px 6px;
+	    text-decoration: none;
+	  }
+
+	  .login-btn:hover {
+	    background: #5b74a8;
+	    text-decoration: none;
+	  }
+
+	  .navbar-default .navbar-logo{
+	      color:#fff;
+	      font-size:40px;
+	      font-weight:bold;
+	    }
+	  .navbar-default .navbar-logo:focus, .navbar-default .navbar-logo:hover{color:#fff; text-decoration: none;}
+	  .form .form-control { margin-bottom: 10px; }
+
+	  .fb-features {
+
+	  	font-family: 'verdana';
+
+	  }
+	  .fb-features ul li{
+
+	  	list-style: none;
+
+
+	  }
+	  @media (min-width:768px) {
+	   
+	    .form-inline .aln-left{
+	      float:left !important;
+	    }
+	    .form-inline .aln-right{
+	      float:right !important;
+	    }
+
+	    .form-inline input[type="password"]{
+	      margin-left:3px;
+	    }
+	    .form-inline .login-btn{
+	      margin-left: 10px;
+	      margin-top: 24px;
+	    }
+	    .signup-mobile {display: none;}
+	  }
+	 @media (max-width:500px) {
+
+		.navbar-header{background-color: #3b5998;} 
+		.navbar-default{background-color:#fff !important;}
+		.form-inline label {color:#000;}
+		.fb-features,.signup-frm {display: none;}
+		.signup-mobile {display: block;}
+		.form-middle .login-text {margin-left:0px !important;}
+		.form-middle {margin-top:0px !important;}
+		.mobile-logo {display: block !important;}
+		.pro-logo{display: none !important;}
+		.search{display: none;}
+		.profile-pic {padding:0 0 !important; margin-top: -50px;}
+		.update-status-lnk, .add-photo-link { padding-bottom:10px; }
+		.login-pass { width:100% !important; }
+	}
+
+	  .slogan{
+	      color: #0e385f;
+	      line-height: 29px;
+	      font-weight:bold;
+	    }
+
+	    .navbar-logo{
+	      padding:35px 15px;
+	    }
+	    .lnk_frgt a {color:#9cb4d8 !important;}
+
+	  .form-inline .algn-left{
+	      float:left !important;
+	    }
+	  .fb_icon {
+	    width: 60px;
+	  }
+
+
+	 hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0; 
+}
+	  .btn-signup {margin-bottom: 10px;}
+	  .form-middle{padding: 20px;}
+	  .form-middle{margin-top:100px; background-color:#fff;}
+	  .form-middle h4 {color: #3b5998;}
+	  .form-middle .login-text {margin-left:30px; color:#808080; font-weight: bold; }
+	  .form-middle .pro-pic {
+		  width: 50px;
+		  padding: 5px;
+		  float: left;
+		}
+
+		.pro-name {
+		  font-weight: bold;
+		  font-size: 11px;
+		  font-family: verdana;
+	}
+	.pro-email {
+    color: #90949c;
+	}
+	.pro-link {
+		display: block;
+		margin-top: 10px;
+		padding-left: 5px;
+		color:#365899;
+	}
+	.login-pass {width:200px;}
+	.keep {font-size: 12px;}
+	.form-middle .login-btn , .form-middle .signup {margin-top: 0px; font-weight: bold;}
+ 	.forgot_link {
+	  display: block;
+	  padding-top: 5px;
+	}
+	.password-section {margin-top: -10px;}
+	.languages {
+    list-style: none;
+}
+.languages li {
+  float: left;
+  padding: 10px;
+}
+
+#search-text-input{
+           	border-top: thin solid #e5e5e5;
+			border-right: thin solid #e5e5e5;
+			border-bottom: 0;
+			border-left: thin solid #e5e5e5;
+			box-shadow: 0px 1px 1px 1px #e5e5e5;
+			float: left;
+			height: 27px;
+			margin: .8em 0 0 .5em;
+			outline: 0;
+			padding: .4em 0 .4em .6em;
+			width: 282px;
+			border-radius: 2px;
+        }
+         
+        #button-holder{
+            background-color:#fff;
+            border-top:thin solid #e5e5e5;
+            box-shadow:1px 1px 1px 1px #e5e5e5;
+            cursor:pointer;
+            float:left;
+            height:27px;
+            margin:11px 0 0 0;
+            text-align:center;
+            width:50px;
+        }
+         
+        #button-holder img{
+            margin:4px;
+            width:20px; 
+        }
+        .pro-logo{display: block;}
+        .mobile-logo{display: none;}
+
+        
+
+        .profile-pic {padding-right: 290px;padding-top: 10px;}
+        .profile-left a{color:#1d2129; font-size: 12px; font-family: 'verdana'}
+        .profile-left img {padding: 2px;}
+        .txtarea-status {height: 100px;
+border: 1px none rgb(205, 205, 205);
+background-color: rgb(255, 255, 255);}
+.txtarea-status img {    width: 60px;
+    padding: 10px;
+}
+.status {
+    background-color: #fff;
+    padding: 10px;
+}
+.status-txt { color: #cdcdcd; } 
+.profile-right h1{ color:#90949c; font-size: 17px;  } 
