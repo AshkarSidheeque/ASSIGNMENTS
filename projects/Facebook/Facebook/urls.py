@@ -25,8 +25,7 @@ urlpatterns = [
     url(r'^profile/', views.profile, name='profile'),
     url(r'^email/', views.email, name='email'),
     url(r'^login2/', views.login2, name='login2'),
-
-
+    url(r'^webservice/', views.webservice, name='webservice'),
 
 
 

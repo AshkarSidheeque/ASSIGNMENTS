@@ -43,9 +43,9 @@
                      </div>
                      <div class="col-md-8">
                         <img id="profile_pic" class="pro-pic"/>
-                        <span class="pro-name">Haris NP</span><br>
+                        <span id="pro_name" class="pro-name"></span><br>
                         <span id="username" class="pro-email"></span>
-                        <a href="#" class="pro-link">Not Haris?</a>
+                        <a href="#" class="pro-link">Not <span id="user_name"></span></a>
                      </div>
                   </div>
                   <br/>
@@ -55,7 +55,7 @@
                      </div>
                      <div class="col-md-8">
                         <input type="password" name="password" class="form-control input-sm login-pass" id="password">
-                        <input type="hidden" id="email" name="email">
+                        <input type="hidden" id="user_nm" name="user_nm">
 
                         <input id="keep_login" type="checkbox" name="keep_login" value="1" checked="1"/>
                         <span class="keepme">Keep me logged in</span>
@@ -94,24 +94,24 @@
  <script>
          $(document).ready(function(){
              $("#submit-btn").click(function(){
-               var email = $('#email').val();
+               var username = $('#user_nm').val();
                var password = $('#password').val();
-                 $.ajax({url: "http://api.baabtra.com/LoginService/login.php", 
+                 $.ajax({url: "http://127.0.0.1:8000/webservice/", 
                      dataType:"json",
-                     type: "POST",
-                     data:{email:email ,password:password},
+                     type: "GET",
+                     data:{username:username ,password:password},
                      success: function(data){
                      console.log(data);
                      
-                   if (data[0].ResponseCode == 200) {
+                    
+                   if (data.ResponseCode == 200) {
                            
                         // url = "pages/profile.html?pro_pic=" + data[0].vchr_prof_pic
 // $(location).attr("href", url);
-
-                                 $( "body" ).load( "/profile/", function() {
-                $(".profile_image").attr('src', data[0].vchr_prof_pic);
-                $('#fname').html(data[0].vchr_first_name);
-                $('#lname').html(data[0].vchr_last_name);
+                $( "body" ).load( "/profile/", function() {
+                $(".profile_image").attr('src', data.vchr_prof_pic);
+                $('#fname').html(data.vchr_first_name);
+                $('#lname').html(data.vchr_last_name);
 
 
                });
@@ -119,7 +119,7 @@
 
 
                   }
-               else if (data[0].ResponseCode == 500)
+               else if (data.ResponseCode == 500)
                {
 
 
@@ -127,17 +127,19 @@
                //  $(location).attr("href", url);   
 
                  $( "body" ).load( "/email/", function() {
-                $("#profile_pic").attr('src', data[0].vchr_prof_pic);
-                $('#username').html(data[0].vchr_user_name);
-                 $('#email').val(data[0].vchr_user_name);
+                $("#profile_pic").attr('src', data.vchr_prof_pic);
+                $('#username').html(data.vchr_user_name);
+                $('#user_name').html(data.vchr_first_name);
+                $('#pro_name').html(data.vchr_first_name);
+                 $('#user_nm').val(data.vchr_user_name);
 
                });
 
                }
-               else if(data[0].ResponseCode == 404)
+               else if(data.ResponseCode == 404)
                {
                   
-                  $( "body" ).load( "/login2/", function() {
+                 $( "body" ).load( "/login2/", function() {
               
 
                });
