@@ -34,7 +34,6 @@ def webservice(request):
     user = authenticate(username=username, password=password)
 
     if user is not None:
-        login(request, user)
         user_profile = Profile.objects.get(id=user.id)
         pro_pic = str(user_profile.photo)
         return JsonResponse({"vchr_user_name":username, "ResponseCode":200,"Msg":'Success',"vchr_first_name":user.first_name,"vchr_last_name":user.last_name,"vchr_prof_pic":pro_pic })   
