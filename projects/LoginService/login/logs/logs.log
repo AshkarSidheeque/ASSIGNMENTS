@@ -1,0 +1,96 @@
+Internal Server Error: /webservice/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ashkar/Desktop/ASSIGNMENTS/projects/Facebook/login/views.py", line 45, in webservice
+    user_profile = Profile.objects.get(id=4)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+DoesNotExist: Profile matching query does not exist.
+"GET /webservice/?username=ashkar&password= HTTP/1.1" 500 16496
+Internal Server Error: /webservice/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ashkar/Desktop/ASSIGNMENTS/projects/Facebook/login/views.py", line 45, in webservice
+    user_profile = Profile.objects.get(id=4)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+DoesNotExist: Profile matching query does not exist.
+"GET /webservice/?username=ashkar&password=FTEEE HTTP/1.1" 500 16511
+Internal Server Error: /webservice/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ashkar/Desktop/ASSIGNMENTS/projects/Facebook/login/views.py", line 45, in webservice
+    user_profile = Profile.objects.get(id=4)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+DoesNotExist: Profile matching query does not exist.
+Internal Server Error: /webservice/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ashkar/Desktop/ASSIGNMENTS/projects/Facebook/login/views.py", line 45, in webservice
+    user_profile = Profile.objects.get(id=4)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+DoesNotExist: Profile matching query does not exist.
+"GET /webservice/?username=ashkar&password=FTEEE HTTP/1.1" 500 16511
+Internal Server Error: /webservice/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ashkar/Desktop/ASSIGNMENTS/projects/Facebook/login/views.py", line 45, in webservice
+    user_profile = Profile.objects.get(id=4)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+DoesNotExist: Profile matching query does not exist.
+"GET /webservice/?username=ashkar&password=FTEEE HTTP/1.1" 500 16511
+"GET /webservice/?username=ashkar&password=FTEEE HTTP/1.1" 500 16511
+Internal Server Error: /webservice/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ashkar/Desktop/ASSIGNMENTS/projects/Facebook/login/views.py", line 39, in webservice
+    user_profile = Profile.objects.get(id=5)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+DoesNotExist: Profile matching query does not exist.
+"GET /webservice/?username=ashycodes%40gmail.com&password=ash123sid HTTP/1.1" 500 16591

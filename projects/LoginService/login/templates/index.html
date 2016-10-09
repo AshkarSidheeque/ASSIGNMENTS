@@ -129,9 +129,8 @@
              $("#submit-btn").click(function(){
              	var username = $('#username').val();
              	var password = $('#password').val();
-                 $.ajax({url: "http://127.0.0.1:9000/webservice/", 
+                 $.ajax({url: "http://127.0.0.1:8000/webservice/", 
                  		dataType:"json",
-                 		
                  		type: "GET",
          				data:{username:username ,password:password},
                  	   success: function(data){
