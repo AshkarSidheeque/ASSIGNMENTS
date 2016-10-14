@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'login',
     'corsheaders',
+    'signup',
 
 ]
 
@@ -132,3 +133,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,"static")
+]
+
+MEDIA_URL = BASE_DIR+'/static/media/'
+
+SITE_URL = 'http://127.0.0.1:9000'

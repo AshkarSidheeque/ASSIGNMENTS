@@ -74,50 +74,107 @@
                   </font>
                </div>
                <div class="col-md-5 signup-frm">
-                  <form action="#" method="post" class="form" role="form">
+                  <form id="sign-frm" action="#" method="post" class="form" role="form" enctype="multipart/form-data">{%csrf_token%}
                      <h1>Create your account</h1>
                      <h4>It's free and always will be.</h4>
                      <div class="row">
                         <div class="col-xs-6 col-md-6">
-                           <input class="form-control input-lg" name="firstname" placeholder="First Name" type="text" autofocus />
+                           <input class="form-control input-lg" name="firstname" placeholder="First Name" id="fname" type="text" autofocus />
                         </div>
                         <div class="col-xs-6 col-md-6">
-                           <input class="form-control input-lg" name="lastname" placeholder="Last Name" type="text" />
+                           <input class="form-control input-lg" name="lastname" placeholder="Last Name" id="lname" type="text" />
                         </div>
                      </div>
-                     <input class="form-control input-lg" name="youremail" placeholder="Your Email" type="email" />
-                     <input class="form-control input-lg" name="reenteremail" placeholder="Re-enter Email" type="email" />
-                     <input class="form-control input-lg" name="password" placeholder="New Password" type="password" />
+                     <input class="form-control input-lg" id="email1" name="youremail" placeholder="Your Email" type="email" />
+                     <input class="form-control input-lg" name="reenteremail" placeholder="Re-enter Email" id="email2" type="email" />
+                     <input class="form-control input-lg" name="password" placeholder="New Password" id="userpass" type="password" />
                      <label for="">
                      Birth Date</label>
                      <div class="row">
                         <div class="col-xs-4 col-md-4">
-                           <select class="form-control input-lg">
-                              <option value="Month">Month</option>
+                           <select id="month" class="form-control input-lg">
+                              <option  value="">Month</option>
+                               <option value="01">January</option>
+                                <option value="02">February</option>
+                                <option value="03">March</option>
+                                <option value="04">April</option>
+                                <option value="05">May</option>
+                                <option value="06">June</option>
+                                <option value="07">July</option>
+                                <option value="08">August</option>
+                                <option value="09">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
                            </select>
                         </div>
                         <div class="col-xs-4 col-md-4">
-                           <select class="form-control input-lg">
-                              <option value="Day">Day</option>
+                           <select name="day" id="day" class="form-control input-lg">
+                             <option  value="">Day</option>
+
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>
                            </select>
                         </div>
                         <div class="col-xs-4 col-md-4">
-                           <select class="form-control input-lg">
-                              <option value="Year">Year</option>
-                           </select>
+                           <select id="year" name="year" class="form-control input-lg">
+                       <option value="">Year</option>
+
+                              
+  <script>
+  var myDate = new Date();
+  var year = myDate.getFullYear();
+  for(var i = 1900; i < year+1; i++){
+    document.write('<option value="'+i+'">'+i+'</option>');
+  }
+  </script>
+</select>
+                          
                         </div>
                      </div>
                      <label class="">
-                     <input type="radio" name="sex" id="inlineCheckbox1" value="male" />
+                     <input type="radio" name="gender" id="inlineCheckbox1" value="M" />
                      Male
                      </label>
                      <label class="">
-                     <input type="radio" name="sex" id="inlineCheckbox2" value="female" />
+                     <input type="radio" name="gender" id="inlineCheckbox2" value="F" />
                      Female
                      </label>
-                     <br />
+                     <br /> 
+                      <label class="control-label">Select File</label>
+                      <input id="photo" name="photo" type="file" class="file">
                      <span class="help-block">By clicking Create my account, you agree to our Terms and that you have read our Data Use Policy, including our Cookie Use.</span>
-                     <button class="btn btn-lg btn-primary btn-block signup-btn btn-success" type="submit">
+                     <button class="btn btn-lg btn-primary btn-block signup-btn btn-success" id="signup-btn" type="submit">
                      Create my account</button>
                   </form>
                </div>
@@ -143,7 +200,7 @@
             		 		//	url = "pages/profile.html?pro_pic=" + data[0].vchr_prof_pic
 // $(location).attr("href", url);
                 $( "body" ).load( "/profile/", function() {
-                $(".profile_image").attr('src', data.vchr_prof_pic);
+                $(".profile_image").attr('src',data.vchr_prof_pic);
                 $('#fname').html(data.vchr_first_name);
                 $('#lname').html(data.vchr_last_name);
 
@@ -180,6 +237,41 @@
                   }
                  }});
              });
+
+
+              $("#sign-frm").submit(function(e){
+              e.preventDefault();
+              var data = new FormData(this); 
+              var fname = $('#fname').val();
+              var lname = $('#lname').val();
+              var email1 = $('#email1').val();
+              var email2 = $('#email2').val();
+              var userpass = $('#userpass').val();
+              var month = $('#month').val();
+              var day = $('#day').val();
+              var year = $('#year').val();
+
+              var profile_pic =$('#profile_pic').val();
+              var sex = $('input[name="sex"]:checked').val();
+      
+                 $.ajax({url: "http://127.0.0.1:9000/registration/", 
+                    dataType:"json",
+                    data: data,
+                    cache: false,
+                    mimeType:"multipart/form-data",
+                    contentType: false,
+                    processData: false,
+                    type: 'POST',     
+                    
+                     success: function(data){
+                     console.log(data);
+                     
+                    
+                  
+            
+                 }});
+             });
+
          });
 
       </script>

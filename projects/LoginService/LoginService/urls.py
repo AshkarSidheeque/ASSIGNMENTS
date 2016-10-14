@@ -17,13 +17,12 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
-from login import views
+from login import views as login_view
+from signup import views as signup_view
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^webservice/', views.webservice, name='webservice'),
-
-
-
+    url(r'^webservice/', login_view.webservice, name='webservice'),
+    url(r'^registration/',signup_view.registration,name='registration')
 ]
 
