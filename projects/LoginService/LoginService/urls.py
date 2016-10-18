@@ -20,9 +20,11 @@ from django.conf.urls.static import static
 from login import views as login_view
 from signup import views as signup_view
 
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^webservice/', login_view.webservice, name='webservice'),
-    url(r'^registration/',signup_view.registration,name='registration')
+    url(r'^registration/',signup_view.registration,name='registration'),
+    url(r'^activate/$',signup_view.activation,name='activation'),
 ]
 

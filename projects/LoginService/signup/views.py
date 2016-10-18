@@ -14,8 +14,10 @@ from django.core.files.storage import FileSystemStorage
 from django.views.decorators.csrf import csrf_exempt
 from login.forms import ProfileForm
 from django.conf import settings
-
+from django.core.mail import send_mail
 from django.contrib import messages 
+from django.template import Context
+from django.template.loader import get_template
 @csrf_exempt
 def registration(request):
 	SITE_URL = settings.SITE_URL
@@ -39,14 +41,12 @@ def registration(request):
 	#pro = request.FILES('photo')
 	if not request.FILES:
 		print "no files"
-	else:
-		print "files"
-
-
+	
 	#user = authenticate(username=userObj.email, password=userpass)
+	userObj.is_active = False
 	userObj.save()
 	user_id = userObj.id
-	print user_id	
+	user_name = userObj.first_name
 	if request.method == 'POST':
 		#data = {'photo': pro,'gender': sex,user_id:user_id}
 		form = ProfileForm(request.POST, request.FILES)
@@ -60,8 +60,29 @@ def registration(request):
 			print(form.errors)
 			print form.data
 
-	"""
-	userPro.save()"""
+	template = get_template('confirm.html')
+	context = Context({'user_id': user_id,'user_name': user_name })
+	content = template.render(context)
+	email_body = "Hello, %s,thanks for signing up for a Facebook account!\n\nTo activate your account click below link \n\n http://127.0.0.1:9000/activate/?user_id=%s" % (user_name,
+                user_id)
+	send_mail(
+    'Subject here',
+    email_body,
+    'ashkarsidheeque@gmail.com',
+    [userObj.email],
+    fail_silently=False,
+)
 	context={'user_inserted':"true"};
 	return render_to_response("registration.html",context,RequestContext(request))
+
+def activation(request):
+	new_id = request.GET['user_id']
+	print new_id
+	user = User.objects.get(id=new_id)
+	user.is_active = True
+	user.save()
+	context={'user_activated':"true"};
+	return render_to_response("activated.html",context,RequestContext(request))
+
+
 
